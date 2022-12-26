@@ -21,6 +21,12 @@ async function buscaVideo(evento) {
     )
     )
     );
+
+    if (busca.length == 0) {
+        lista.innerHTML = `
+            <h2 class=mensagem__titulo>Não vídeos com o termo "${dadosPesquisa}". Revise a sua pesquisa!</h2>
+        `
+    }
 }
 
 const botaoPesquisa = document.querySelector("[data-botao-pesquisa]")
